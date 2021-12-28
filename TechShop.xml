@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalog>
-  <department name="Headphones">
+  <section name="Headphones">
     <entry>
       <brand>Sennheiser</brand>
       <price>94.99</price>
@@ -13,24 +13,24 @@
       <brand>Marshall</brand>
       <price>130.99</price>
     </entry>
-  </department>
+  </section>
 
-  <department name="Docking Station">
+  <section name="Docking Station">
     <entry>
       <brand>Dell</brand>
       <price>120.99</price>
     </entry>
     <entry>
-      <brand>Lenovo</brand>
+      <item>Lenovo</item>
       <price>230.00</price>
     </entry>
     <entry onsale="true">
-      <brand>WavLink</brand>
+      <item>WavLink</item>
       <price>99.00</price>
     </entry>
-  </department>
+  </section>
 
-  <department name="Keyboard">
+  <section name="Keyboard">
     <entry>
       <brand>Logitech</brand>
       <price>70.99</price>
@@ -43,9 +43,9 @@
       <brand>Microsoft</brand>
       <price>74.99</price>
     </entry>
-  </department>
+  </section>
 
-  <department name="Mouse">
+  <section name="Mouse">
     <entry>
       <brand>Perixx</brand>
       <price>17.99</price>
@@ -58,20 +58,20 @@
       <brand>Letaclanic</brand>
       <price>16.99</price>
     </entry>
-  </department>
+  </section>
 
-  <department name="USB Hub">
+  <section name="USB Hub">
     <entry>
       <brand>Anker</brand>
       <price>12.99</price>
     </entry>
     <entry>
-      <brand>Upgrowt</brand>
+      <item>Upgrowt</item>
       <price>9.99</price>
     </entry>
     <entry onsale="true">
       <brand>Subnet</brand>
       <price>7.99</price>
     </entry>
-  </department>
+  </section>
 </catalog>
