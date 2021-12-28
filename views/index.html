@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Paddy's Cafe</title>
+        <title>TechShop</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/TechShop.css" rel="stylesheet" />        
+        <link href="css/PaddysCafe.css" rel="stylesheet" />        
         <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -18,7 +18,7 @@
         <script src="js/table.js"></script>
     </head>
     <body>
-        <!-- Navigation bar-->
+        <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">TechShop</a>
@@ -31,11 +31,11 @@
                 </div>
             </div>
         </nav>
-        <!-- Contetnt -->
+        <!-- Page content-->
         <div class="container">
             <div class="row">
                 <div class="text-center mt-5">
-                    <h1>Welcome to TechShop</h1>
+                    <h1>Welcome to Paddy's Cafe</h1>
                     <p class="lead">Choose any accessories that you would like to buy</p>
                 </div>
                 <div id="results" class="col-lg-8 mb-5 order-2"></div>
@@ -43,13 +43,13 @@
                     <form enctype="application/json" action="/post/json" method="post">
                         <div class="form-group">
                             <select class="form-control" name="sec_n">
-                                <option value="0">Headphones</option>
+                                <option value="0">Earphones</option>
                                 <option value="1">Docking Stations</option>
                                 <option value="2">Keyboards</option>
                                 <option value="3">Mice</option>
                                 <option value="4">USB Hubs</option>
                             </select>
-                            <input class="form-control mt-3" type="text" name="brand" placeholder="Brand">
+                            <input class="form-control mt-3" type="text" name="brand" placeholder=Brand">
                             <input class="form-control mt-3" type="text" name="price" placeholder="Price">
                             <div class="d-grid gap-2"><button type="submit" class="btn btn-primary btn-block mt-3">Submit</button></div>
                         </div>
@@ -60,9 +60,9 @@
                 </div>
             </div>
         </div>
-        <!-- Bootstrap  JS-->
+        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js bootstrap.bundle.min.js"></script>
-        <!-- Core  JS-->
+        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
