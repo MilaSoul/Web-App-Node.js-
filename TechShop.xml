@@ -15,7 +15,7 @@
     </entry>
   </section>
 
-  <section name="Docking Station">
+  <section name="Docking Stations">
     <entry>
       <brand>Dell</brand>
       <price>120.99</price>
@@ -30,7 +30,7 @@
     </entry>
   </section>
 
-  <section name="Keyboard">
+  <section name="Keyboards">
     <entry>
       <brand>Logitech</brand>
       <price>70.99</price>
@@ -45,7 +45,7 @@
     </entry>
   </section>
 
-  <section name="Mouse">
+  <section name="Mice">
     <entry>
       <brand>Perixx</brand>
       <price>17.99</price>
@@ -60,7 +60,7 @@
     </entry>
   </section>
 
-  <section name="USB Hub">
+  <section name="USB Hubs">
     <entry>
       <brand>Anker</brand>
       <price>12.99</price>
