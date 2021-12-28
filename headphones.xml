@@ -1,53 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+  <department name="Headphones">
+    <entry>
+      <brand>Sennheiser</brand>
+      <price>94.99</price>
+    </entry>
+    <entry>
+      <brand>Sony</brand>
+      <price>34.99</price>
+    </entry>
+    <entry onsale="true">
+      <brand>Marshall</brand>
+      <price>130.99</price>
+    </entry>
+  </department>
 
-<CATALOG>
-<HEADPHONES>
-<BRAND>Sennheiser</BRAND>
-<COLOR>Black</COLOR>
-<CONNECTIVITY>Wireless</CONNECTIVITY>
-<WEIGHT>285 gm</WEIGHT>
-<BATTERY>30 hrs</BATTERY>
-<PRICE>€ 94,99</PRICE>
-<AVAILABILITY>In Stock</AVAILABILITY>
-</HEADPHONES>
+  <department name="Docking Station">
+    <entry>
+      <brand>Dell</brand>
+      <price>120.99</price>
+    </entry>
+    <entry>
+      <brand>Lenovo</brand>
+      <price>230.00</price>
+    </entry>
+    <entry onsale="true">
+      <brand>WavLink</brand>
+      <price>99.00</price>
+    </entry>
+  </department>
 
-<HEADPHONES>
-<BRAND>Sony</BRAND>
-<COLOR>Blue</COLOR>
-<CONNECTIVITY>Wireless</CONNECTIVITY>
-<WEIGHT>132 gm</WEIGHT>
-<BATTERY>35 hrs</BATTERY>
-<PRICE>€ 34,99 </PRICE>
-<AVAILABILITY>In Stock</AVAILABILITY>
-</HEADPHONES>
+  <department name="Keyboard">
+    <entry>
+      <brand>Logitech</brand>
+      <price>70.99</price>
+    </entry>
+    <entry>
+      <brand>Corsair</brand>
+      <price>170.99</price>
+    </entry>
+    <entry onsale="true">
+      <brand>Microsoft</brand>
+      <price>74.99</price>
+    </entry>
+  </department>
 
-<HEADPHONES>
-<BRAND>JBL</BRAND>
-<COLOR>Red</COLOR>
-<CONNECTIVITY>Wireless</CONNECTIVITY>
-<WEIGHT>120 gm</WEIGHT>
-<BATTERY>35 hrs</BATTERY>
-<PRICE>€ 54,99 </PRICE>
-<AVAILABILITY>Out Of Stock</AVAILABILITY>
-</HEADPHONES>
+  <department name="Mouse">
+    <entry>
+      <brand>Perixx</brand>
+      <price>17.99</price>
+    </entry>
+    <entry>
+      <brand>Delux</brand>
+      <price>27.99</price>
+    </entry>
+    <entry onsale="true">
+      <brand>Letaclanic</brand>
+      <price>16.99</price>
+    </entry>
+  </department>
 
-<HEADPHONES>
-<BRAND>Anker</BRAND>
-<COLOR>Blue</COLOR>
-<CONNECTIVITY>Wireless</CONNECTIVITY>
-<WEIGHT>263 gm</WEIGHT>
-<BATTERY>40 hrs</BATTERY>
-<PRICE>€ 69,99 </PRICE>
-<AVAILABILITY>In Stock</AVAILABILITY>
-</HEADPHONES>
-
-<HEADPHONES>
-<BRAND>Marshall</BRAND>
-<COLOR>Black</COLOR>
-<CONNECTIVITY>Wireless</CONNECTIVITY>
-<WEIGHT>255 gm</WEIGHT>
-<BATTERY>30 hrs</BATTERY>
-<PRICE>€ 149,99 </PRICE>
-<AVAILABILITY>In Stock</AVAILABILITY>
-</HEADPHONES>
-</CATALOG>
+  <department name="USB Hub">
+    <entry>
+      <brand>Anker</brand>
+      <price>12.99</price>
+    </entry>
+    <entry>
+      <brand>Upgrowt</brand>
+      <price>9.99</price>
+    </entry>
+    <entry onsale="true">
+      <brand>Subnet</brand>
+      <price>7.99</price>
+    </entry>
+  </department>
+</catalog>
