@@ -1,7 +1,7 @@
 <?xml version="1.0"?> 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:template match="/">
-    <table id="shopingTable" border="1" class="indent">
+    <table id="menuTable" border="1" class="indent">
         <thead>
             <tr>
                 <th>Select</th>
@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            <xsl:for-each select="//department">
+            <xsl:for-each select="//section">
                 <tr>
                     <td colspan="3">
                         <xsl:value-of select="@name" />
