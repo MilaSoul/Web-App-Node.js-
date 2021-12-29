@@ -15,8 +15,8 @@ const   http = require('http'), //This module provides the HTTP server functiona
 
             res.writeHead(200, {'Content-Type' : 'text/html'});
         
-            let xml = fs.readFileSync('PaddysCafe.xml', 'utf8'),
-                xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8');
+            let xml = fs.readFileSync('TechShop.xml', 'utf8'),
+                xsl = fs.readFileSync('TechShop.xsl', 'utf8');
         
             console.log(xml);
             console.log(xsl);
