@@ -64,7 +64,7 @@ router.post('/post/json', function (req, res) {
         XMLtoJSON('TechShop.xml', function (err, result) {
             if (err) throw (err);
             
-            result.menu.section[obj.sec_n].entry.push({'brand': obj.brand, 'price': obj.price});
+            result.catalog.section[obj.sec_n].entry.push({'brand': obj.brand, 'price': obj.price});
 
             console.log(JSON.stringify(result, null, "  "));
 
@@ -89,7 +89,7 @@ router.post('/post/delete', function (req, res) {
         XMLtoJSON('TechShop.xml', function (err, result) {
             if (err) throw (err);
             
-            delete result.menu.section[obj.section].entry[obj.entree];
+            delete result.catalog.section[obj.section].entry[obj.entree];
 
             console.log(JSON.stringify(result, null, "  "));
 
