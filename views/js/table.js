@@ -20,7 +20,7 @@ function draw_table()
 
 function select_row()
 {
-	$("#menuTable tbody tr[id]").click(function ()
+	$("#shopTable tbody tr[id]").click(function ()
 	{
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected");
