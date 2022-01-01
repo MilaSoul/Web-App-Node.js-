@@ -1,11 +1,11 @@
 var gEntreeCount = 0;
 // returns a number that represents the sum of all the selected menu
 // item prices.
-function calculateBill(idMenuTable) {
+function calculateBill(idShopTable) {
     var fBillTotal = 0.0;
     var i = 0;
     // find the table tag
-    var oTable = document.getElementById(idMenuTable);
+    var oTable = document.getElementById(idShopTable);
     // go through the table and add up the prices of all
     // the selected items. The code takes advantage of the 
     // fact that each checkbox has a corresponding row in
@@ -26,19 +26,19 @@ function calculateBill(idMenuTable) {
     // return the price as a decimal number with 2 decimal places
     return Math.round(fBillTotal * 100.0) / 100.0;
 };
-// This function either turns on or off the row highlighting for vegetarian
+// This function either turns on or off the row highlighting for onsale
 // items (depending on the value of bShowVeg)
-function highlightVegetarian(idTable, bShowVeg) {
-    // if bShowVeg is true, then we're highlighting vegetarian
+function highlightOnsale(idTable, bShowVeg) {
+    // if bShowVeg is true, then we're highlighting onsale
     //	meals, otherwise we're unhighlighting them.
     var i = 0;
     var oTable = document.getElementById(idTable);
     var oTBODY = oTable.getElementsByTagName('TBODY')[0];
     var aTRs = oTBODY.getElementsByTagName('TR');
     // walk through each of the table rows and see if it has a 
-    // "vegetarian" attribute on it.
+    // "onsale" attribute on it.
     for (i = 0; i < aTRs.length; i++) {
-        if (aTRs[i].getAttribute('vegetarian') && aTRs[i].getAttribute('vegetarian') == "true") {
+        if (aTRs[i].getAttribute('onsale') && aTRs[i].getAttribute('onsale') == "true") {
             if (bShowVeg) {
                 aTRs[i].style.backgroundColor = "lightGreen";
             } else {
@@ -59,11 +59,11 @@ function getParentTag(oNode, sParentType) {
     return oParent;
 };
 window.addEventListener("load", function () {
-    document.forms[0].txtBillAmt.value = calculateBill('menuTable');
+    document.forms[0].txtBillAmt.value = calculateBill('shopTable');
     document.querySelector("#calcBill").addEventListener("click", function () {
-        document.forms[0].txtBillAmt.value = calculateBill('menuTable');
+        document.forms[0].txtBillAmt.value = calculateBill('shopTable');
     });
     document.querySelector("#showVeg").addEventListener("click", function () {
-        highlightVegetarian('menuTable', this.checked);
+        highlightOnsale('shopTable', this.checked);
     });
 });
