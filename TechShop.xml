@@ -13,8 +13,11 @@
       <brand>Marshall</brand>
       <price>130.99</price>
     </entry>
+    <entry>
+      <brand>GGG</brand>
+      <price>25</price>
+    </entry>
   </section>
-
   <section name="Docking Stations">
     <entry>
       <brand>Dell</brand>
@@ -29,7 +32,6 @@
       <price>99.00</price>
     </entry>
   </section>
-
   <section name="Keyboards">
     <entry>
       <brand>Logitech</brand>
@@ -44,7 +46,6 @@
       <price>74.99</price>
     </entry>
   </section>
-
   <section name="Mice">
     <entry>
       <brand>Perixx</brand>
@@ -59,7 +60,6 @@
       <price>16.99</price>
     </entry>
   </section>
-
   <section name="USB Hubs">
     <entry>
       <brand>Anker</brand>

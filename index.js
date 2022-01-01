@@ -68,7 +68,7 @@ router.post('/post/json', function (req, res) {
 
             console.log(JSON.stringify(result, null, "  "));
 
-            JSONtoXML('TechShop', result, function(err){
+            JSONtoXML('TechShop.xml', result, function(err){
                 if (err) console.log(err);
             });
         });
