@@ -27,8 +27,8 @@ function calculateBill(idShopTable) {
     return Math.round(fBillTotal * 100.0) / 100.0;
 };
 // This function either turns on or off the row highlighting for onsale
-// items (depending on the value of bShowVeg)
-function highlightOnsale(idTable, bShowVeg) {
+// items (depending on the value of bShowSale)
+function highlightOnsale(idTable, bShowSale) {
     // if bShowVeg is true, then we're highlighting onsale
     //	meals, otherwise we're unhighlighting them.
     var i = 0;
@@ -39,7 +39,7 @@ function highlightOnsale(idTable, bShowVeg) {
     // "onsale" attribute on it.
     for (i = 0; i < aTRs.length; i++) {
         if (aTRs[i].getAttribute('onsale') && aTRs[i].getAttribute('onsale') == "true") {
-            if (bShowVeg) {
+            if (bShowSale) {
                 aTRs[i].style.backgroundColor = "lightGreen";
             } else {
                 aTRs[i].style.backgroundColor = "";
@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
     document.querySelector("#calcBill").addEventListener("click", function () {
         document.forms[0].txtBillAmt.value = calculateBill('shopTable');
     });
-    document.querySelector("#showVeg").addEventListener("click", function () {
+    document.querySelector("#showSale").addEventListener("click", function () {
         highlightOnsale('shopTable', this.checked);
     });
 });
