@@ -1,19 +1,19 @@
-const   http = require('http'), //This module provides the HTTP server functionalities
-        path = require('path'), //The path module provides utilities for working with file and directory paths
-        express = require('express'), //This module allows this app to respond to HTTP requests, defines the routing and renders back the required content
-        fs = require('fs'), //This module allows to work with the file system: read and write files back
-        xmlParse = require('xslt-processor').xmlParse, //This module allows to work with XML files
-        xsltProcess = require('xslt-processor').xsltProcess, //The same module allows us to uitlise XSL Transformations
-        xml2js = require('xml2js'); //This module does XML <-> JSON conversion
+const   http = require('http'), //HTTP server functionalities
+        path = require('path'), //utilities for working with file and directory paths
+        express = require('express'), //allowing this app to respond to HTTP requests, defines the routing and renders back the required content
+        fs = require('fs'), //allowing to work with the file system: read and write files back
+        xmlParse = require('xslt-processor').xmlParse, //allowing to work with XML files
+        xsltProcess = require('xslt-processor').xsltProcess, //uitlising XSL Transformations
+        xml2js = require('xml2js'); //XML <-> JSON conversion
 
 const   router = express(), 
         server = http.createServer(router);
 
-router.use(express.static(path.resolve(__dirname,'views'))); //We serve static content from "views" folder
-router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be encoded in a URL targeting our end point
-router.use(express.json()); //We include support for JSON
+router.use(express.static(path.resolve(__dirname,'views'))); //serving content from "views" folder
+router.use(express.urlencoded({extended: true})); //data sent from the client to be encoded in a URL targeting our end point
+router.use(express.json()); //support for JSON
 
-// Function to read in XML file and convert it to JSON
+// reading XML file and converting into JSON
 function XMLtoJSON(filename, cb) {
     var filepath = path.normalize(path.join(__dirname, filename));
     fs.readFile(filepath, 'utf8', function(err, xmlStr) {
@@ -22,7 +22,7 @@ function XMLtoJSON(filename, cb) {
     });
 };
   
-  //Function to convert JSON to XML and save it
+  //converting JSON to XML and save it
 function JSONtoXML(filename, obj, cb) {
     var filepath = path.normalize(path.join(__dirname, filename));
     var builder = new xml2js.Builder();
@@ -55,16 +55,16 @@ router.get('/get/html', function(req, res) {
 
 });
 
-router.post('/post/json', function (req, res) {
+router.post('/post/json', function (req, res) { 
 
-    function appendJSON(obj) {
+    function appendJSON(obj) {//addining brands into the table
 
         console.log(obj)
 
         XMLtoJSON('TechShop.xml', function (err, result) {
             if (err) throw (err);
             
-            result.catalog.section[obj.sec_n].entry.push({'brand': obj.brand, 'price': obj.price});
+            result.catalog.section[obj.sec_n].entry.push({'brand': obj.brand, 'price': obj.price}); //addidng into the the xml file
 
             console.log(JSON.stringify(result, null, "  "));
 
@@ -76,11 +76,11 @@ router.post('/post/json', function (req, res) {
 
     appendJSON(req.body);
 
-    res.redirect('back');
+    res.redirect('back');//send back to the main page 
 
 });
 
-router.post('/post/delete', function (req, res) {
+router.post('/post/delete', function (req, res) { //deleting from the table
 
     function deleteJSON(obj) {
 
@@ -89,7 +89,7 @@ router.post('/post/delete', function (req, res) {
         XMLtoJSON('TechShop.xml', function (err, result) {
             if (err) throw (err);
             
-            delete result.catalog.section[obj.section].entry[obj.entree];
+            delete result.catalog.section[obj.section].entry[obj.entree]; //deleting from the xml file
 
             console.log(JSON.stringify(result, null, "  "));
 
@@ -101,7 +101,7 @@ router.post('/post/delete', function (req, res) {
 
     deleteJSON(req.body);
 
-    res.redirect('back');
+    res.redirect('back'); //send back to the main page 
 
 });
 
